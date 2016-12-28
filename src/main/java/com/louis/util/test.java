@@ -22,22 +22,48 @@ import com.louis.DataPreProcessImpl.DataPreProcessImpl;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.sql.DataSource;
+import org.apache.commons.dbcp.BasicDataSource;
 /** 
  * @author Michael2397 2692613726@qq.com: 
  * @version 创建时间：2016年8月12日 上午11:43:13 
  * 类说明 
  */
 public class test {
+	
+	public static void main(String[] args) throws IOException, URISyntaxException, SQLException {
+		
+		// 获得连接池
+        DataSource dataSource = DemoDBCP.getDataSource();
+        // 从连接池中获得连接
+        Connection conn = dataSource.getConnection();
+        // 准备sql语句
+        String sql = "insert into errorproduct (id,productInnerId,errorInfo,extractTime) values (?,?,?,?)";
+        // 获得PresparedStatement对象
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        // 设置参数
+        pstmt.setInt(1, 1);
+        pstmt.setInt(2, 2);
+        pstmt.setString(3, "埃塞俄比亚");
+        pstmt.setString(4, "2016-12-24");
+        // 执行CRUD操作
+        pstmt.execute();
+        // 关闭连接
+        conn.close();
 
-	public static void main(String[] args) throws IOException, URISyntaxException {
-		int count = 0;
+		
+		
+		
+		/*int count = 0;
 		int duan = 0;
 		for (int i = 0; i < 10; i++) {
 			duan = count++;
 		}
 		System.out.println(duan);
-		
+		*/
 		/*		String str = "13</b>.50";
 		String str1 = str.substring(0,str.indexOf("<"));
 		String str2 = str.substring(str.indexOf("."),str.length());

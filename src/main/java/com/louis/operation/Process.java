@@ -3,10 +3,14 @@ package com.louis.operation;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.PreparedStatement;
+
+
 
 import com.louis.DataPreProcessImpl.DataPreProcessImpl;
 import com.louis.IDataPreProcess.IDataPreProcess;
 import com.louis.domain.DataBaseUser;
+import com.louis.util.DemoDBCP;
 import com.louis.util.ExtractFromExcel;
 import com.louis.util.JdbcUtil;
 import com.louis.util.JudgeMent;
@@ -25,6 +29,9 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.DataFormat;
@@ -41,8 +48,9 @@ import org.omg.CORBA.DATA_CONVERSION;
  */
 public  class Process {
 	//新表的名字
-	String newTableName = "data11_new";
-	String oldTableName = "data11";
+	String newTableName = "data12_new";
+	String oldTableName = "data12";
+	String errorProductName = "errorproduct";
 	//处理的表名
 	String table=newTableName;
 	private Connection conn = null;
@@ -50,6 +58,8 @@ public  class Process {
 	private Statement stmt1 = null;
 	private ResultSet rs = null;
 	private Date extractTime;
+	private String extractTimeStr;
+	private int productInnerID;
 	int count=0;
 	String wholeProvinceCode="";
 	String wholeProvinceCodeDe="";
@@ -57,6 +67,9 @@ public  class Process {
 	ExtractFromExcel extractFromExcel = new ExtractFromExcel();	
 	//设置处理数据当前月份
 	private String YEAR = "2016";
+	
+	
+	
 
 	public static Logger logger = Logger.getLogger("com.foo");
 	/*更新到另外一个表中*/
@@ -92,34 +105,26 @@ public  class Process {
 		
 		//查询数据库中的相应的值
 		try {
+			//获取连接池
+			DataSource dataSource = DemoDBCP.getDataSource();
+			
+			
+			
 			List<HashMap<String,String>> regionCodeName = extractFromExcel.getRegionFromExcel();
-	/*//添加字段
-		    String strAdd = "alter table data add ("
-		    		+ "std_stdProductPrice decimal(15,3) null,"
-		    		+ "std_stdProductPromPrice decimal(15,3) null,"
-		    		+ "std_stdPrice decimal(15,3) null,"
-		    		+ "std_province decimal(15,3) null,"
-		    		+ "std_provinceCode varchar(255) null,"
-		    		+ "std_city varchar(255) null,"
-		    		+ "std_cityCode int(11) null,"
-		    		+ "std_deliveryProvince varchar(255) null,"
-		    		+ "std_deliveryProvinceCode int(11)  null,"
-		    		+ "std_deliveryCity varchar(255) null,"
-		    		+ "std_deliveryCityCode int(11)  null,"
-		    		+ "std_storeLocationProvince varchar(255) null,"
-		    		+ "std_storeLocationProvinceCode int(11) null,"
-		    		+ "std_storeLocationCity varchar(255) null,"
-		    		+ "std_storeLocationCityCode int(11)  null,"
-		    		+ "std_stdWeightValue decimal(15,3) null)";*/
-			//where DataID>=17506833    ID:17515251
-			String str = "select dataID,productName,province,city,deliveryStartArea,storeLocation,productPrice,productPromPrice,weight,storeURL,extractTime from "+table+" where isOperation=0";
+	
+			String str = "select dataID,productName,province,city,deliveryStartArea,storeLocation,productPrice,productPromPrice,weight,storeURL,extractTime,productInnerId from "+table+" where isOperation=0";
 			conn = JdbcUtil.getConnection();
 			stmt = conn.createStatement();
 			stmt1 = conn.createStatement();
-	    /*	to=stmt.executeUpdate(strAdd);*/
 		    rs= stmt.executeQuery(str);
 		    System.out.println("rs");
 		    while(rs.next()){
+		    	//从连接池中获得连接
+				Connection DBCPconn = dataSource.getConnection();
+				//准备sql语句
+				String DBCPsql = "insert into errorProductInformation (id,productInnerId,errorInfo,extractTime) values (?,?,?,?)";
+		        // 获得PresparedStatement对象
+				PreparedStatement pstmt = DBCPconn.prepareStatement(DBCPsql);
 		    	count++;
 		    	//创建对象
 		    	DataBaseUser  dataBaseUser = new DataBaseUser();
@@ -137,7 +142,9 @@ public  class Process {
 			    dataBaseUser.setProductPromPrice(rs.getString(8));
 			    dataBaseUser.setWeight(rs.getString(9));
 			    dataBaseUser.setStoreURL(rs.getString(10));
+			    extractTimeStr = rs.getString(11);
 			    extractTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(rs.getString(11));
+			    productInnerID = Integer.parseInt(rs.getString(12));
 				//得到long类型当前时间
 				long l = System.currentTimeMillis();
 				//new日期对象
@@ -147,14 +154,21 @@ public  class Process {
 			    System.out.println("---------------现在正在处理："+count+"行----------ID:"+dataBaseUser.getDataID()+"---------------"+"时间:"+dateFormat.format(date)+"-----------------------");   
 		   
 			    
+			    
+			    
+			    
+			    
+			    
+			    
 			   /*  * 
 			     * province规范化：首先判断不是空。调用getStdProvince(),调用 dataBaseUser的setStdProvince()
 			     * */
+			    
 			    System.out.println("******分割线******");
 			    System.out.println("更新省份："+dataBaseUser.getProvince());
 			    if(dataBaseUser.getProvince()!=null&&!dataBaseUser.getProvince().equals("")&&!dataBaseUser.getProvince().equals("其他")){
 		        	
-		        	HashMap<String,String> stdProvince = dataPreProcess.getStdProvince(dataBaseUser.getProvince(),"orignalProvince",String.valueOf(count),dataBaseUser.getDataID(),regionCodeName);
+		        	HashMap<String,String> stdProvince = dataPreProcess.getStdProvince(dataBaseUser.getProvince(),"orignalProvince",String.valueOf(count),dataBaseUser.getDataID(),regionCodeName,productInnerID,extractTimeStr,pstmt,DBCPconn);
 		        	Set<Entry<String, String>> sets = stdProvince.entrySet();
 		        	for (Entry<String, String> entry : sets) {
 		        		//获取到的标准地名和标准编码
@@ -172,7 +186,14 @@ public  class Process {
 			    }
 			    System.out.println("省份："+dataBaseUser.getStdProvince()+"编号:"+dataBaseUser.getStdProvinceCode());
 
-		       /*  
+			    
+			    
+			    
+			    
+			    
+			    
+		
+			    /*  
 		          * 
 		          * city规范化：首先判断不是空，调用getStdCity()
 		          * */ 
@@ -181,7 +202,7 @@ public  class Process {
 		       if(dataBaseUser.getCity()!=null&&!dataBaseUser.getCity().equals("")&&!dataBaseUser.getCity().equals("其他")){
 		        	
 		        	
-		        	HashMap<String,String> stdCity = dataPreProcess.getStdCity(dataBaseUser.getCity(),"orignalCity",String.valueOf(count),wholeProvinceCode,dataBaseUser.getDataID(),regionCodeName);
+		        	HashMap<String,String> stdCity = dataPreProcess.getStdCity(dataBaseUser.getCity(),"orignalCity",String.valueOf(count),wholeProvinceCode,dataBaseUser.getDataID(),regionCodeName,productInnerID,extractTimeStr,pstmt);
 		         	Set<Entry<String, String>> sets = stdCity.entrySet();
 		        	for (Entry<String, String> entry : sets) {
 		        		//获取到的标准地名和标准编码
@@ -237,7 +258,7 @@ public  class Process {
 			    System.out.println("更新发货地："+dataBaseUser.getDeliveryStartArea());
 		        if(dataBaseUser.getDeliveryStartArea()!=null&&!dataBaseUser.getDeliveryStartArea().equals("")&&!dataBaseUser.getDeliveryStartArea().equals("其他")){
 		        	
-		        	List<HashMap<String, String>> list = dataPreProcess.getStdDelivery(dataBaseUser.getDeliveryStartArea(), "deliveryStartArea",String.valueOf(count),dataBaseUser.getDataID(),regionCodeName);
+		        	List<HashMap<String, String>> list = dataPreProcess.getStdDelivery(dataBaseUser.getDeliveryStartArea(), "deliveryStartArea",String.valueOf(count),dataBaseUser.getDataID(),regionCodeName,productInnerID,extractTimeStr,pstmt);
 		        	//使用上面的方法，这里穿参数是为了能够错误的输出
 		        	HashMap<String,String> stdDeliveryProvince= list.get(0);
 		        	HashMap<String,String> stdDeliveryCity= list.get(1);
@@ -307,7 +328,7 @@ public  class Process {
 			    System.out.println("******分割线******");
 			    System.out.println("更新店铺地址："+dataBaseUser.getStoreLocation());
 		    //判断：如果StoreLocation为空的话，就吧DeliveryStartArea赋值给StoreLocatio
-    		    if((dataBaseUser.getStoreLocation()==null||"".equals(dataBaseUser.getStoreLocation()))&&dataBaseUser.getDeliveryStartArea()!=null&&!"".equals(dataBaseUser.getDeliveryStartArea())){
+   		    if((dataBaseUser.getStoreLocation()==null||"".equals(dataBaseUser.getStoreLocation()))&&dataBaseUser.getDeliveryStartArea()!=null&&!"".equals(dataBaseUser.getDeliveryStartArea())){
 			    	/*System.out.println("更新店铺地址1："+dataBaseUser.getStoreLocation());*/
 			    	dataBaseUser.setStdStoreLocationProvince(dataBaseUser.getStdDeliveryProvince());
 					dataBaseUser.setStdStoreLocationProvinceCode(dataBaseUser.getStdDeliveryProvinceCode());
@@ -317,7 +338,7 @@ public  class Process {
 			    }else  if(dataBaseUser.getStoreLocation()!=null&&!"".equals(dataBaseUser.getStoreLocation())){
 		        	/*System.out.println("更新店铺地址2："+dataBaseUser.getStoreLocation());*/
 		        	//deliveryStartArea与storeLocation实现是一样的，所以就直接使用了getStdDelivery()
-		        	List<HashMap<String, String>> list = dataPreProcess.getStdDelivery(dataBaseUser.getStoreLocation(), "storeLocation",String.valueOf(count),dataBaseUser.getDataID(),regionCodeName);
+		        	List<HashMap<String, String>> list = dataPreProcess.getStdDelivery(dataBaseUser.getStoreLocation(), "storeLocation",String.valueOf(count),dataBaseUser.getDataID(),regionCodeName,productInnerID,extractTimeStr,pstmt);
 		        	//使用上面的方法，这里穿参数是为了能够错误的输出
 		        	HashMap<String,String> stdStoreLocationProvince= list.get(0);
 		        	HashMap<String,String> stdStoreLocationCity= list.get(1);
@@ -347,8 +368,8 @@ public  class Process {
 		        	dataBaseUser.setStdStoreLocationCity("");
 					dataBaseUser.setStdStoreLocationCityCode("");
 		        }
-    		    
-    		    /*----------------------------------这里根据StoreLocation去补充还是空的province----------------------------------------*/
+   		    
+   		    /*----------------------------------这里根据StoreLocation去补充还是空的province----------------------------------------*/
 			    if("".equals(dataBaseUser.getStdStoreLocationProvinceCode())){
 			    	if(!"".equals(dataBaseUser.getStdStoreLocationCityCode())){
 			    		int stdCityCodeNull = Integer.parseInt(dataBaseUser.getStdStoreLocationCityCode());
@@ -391,7 +412,7 @@ public  class Process {
 					    	String orignalWeight = dataBaseUser.getWeight();
 					    	
 					    	//得到标准的质量数值
-					    	String weight = dataPreProcess.getStdWeightValue(orignalWeight, "weight",String.valueOf(count),dataBaseUser.getDataID());
+					    	String weight = dataPreProcess.getStdWeightValue(orignalWeight, "weight",String.valueOf(count),dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 					    	if(weight.contains("*")){
 					    		if(DataPreProcessImpl.countXX(weight)==1){
 					    			String str1 = weight.split("\\*")[0];
@@ -479,7 +500,7 @@ public  class Process {
 			    	
 			    	String orignalPrice = dataBaseUser.getProductPrice();
 			    	//得到标准化的价格
-			    	dataBaseUser.setStdProductPrice(dataPreProcess.getStdProductPrice(orignalPrice,"ProductPrice",String.valueOf(count),dataBaseUser.getDataID()));
+			    	dataBaseUser.setStdProductPrice(dataPreProcess.getStdProductPrice(orignalPrice,"ProductPrice",String.valueOf(count),dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt));
 			   	 //处理24</b>.80
 			    	
 			    	 if(dataBaseUser.getStdProductPrice().toLowerCase().contains("<")){
@@ -503,7 +524,7 @@ public  class Process {
 			    	
 			    	String orignalPromPrice = dataBaseUser.getProductPromPrice();
 			    	//得到标准化的价格
-			    	dataBaseUser.setStdProductPromPrice(dataPreProcess.getStdProductPrice(orignalPromPrice,"ProductPromPrice",String.valueOf(count),dataBaseUser.getDataID()));
+			    	dataBaseUser.setStdProductPromPrice(dataPreProcess.getStdProductPrice(orignalPromPrice,"ProductPromPrice",String.valueOf(count),dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt));
 			    }else{
 			    	dataBaseUser.setStdProductPromPrice("");
 			    }
@@ -566,85 +587,41 @@ public  class Process {
 				}
 	
 				
-			/*	String extraTime = extractTime.toString();
-				String extractTimeString = extraTime.substring(0, extraTime.indexOf("."));
-				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			    extractTime = sdf.parse(extractTimeString);//
-				//extractTime=sdf.format(extractTime);
-			    System.out.println(extractTime);
-				
-				DateTimeFormatter formatter2 = DateTimeFormat.forPattern("YYYY-MM-dd HH:mm:ss");  
-				LocalDate localDate2 =null;
-				//String year="20"+localDate.getYearOfCentury();
-				//int month = localDate.getMonthOfYear();
-				int 
-				System.out.println("1");
-				if(YEAR.equals(year)&&day<10){
-					System.out.println("2");
-					SimpleDateFormat bartDateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss"); 
-					System.out.println("3");
-					
-					extractTime.setDate(1);
-					extractTime.setHours(0);
-					extractTime.setMinutes(0);
-					extractTime.setSeconds(0);
-					System.out.println("4");
-					
-					System.out.println("5");
-					extractTime=new Date(extractTime.getTime()-1000); //
-					System.out.println("6");
-					
-					month = month -1;
-					//day还需要判断
-					SimpleDateFormat bartDateFormat = new SimpleDateFormat("yyyy-MM-dd");  
-				    String lastTime=YEAR+"-"+month+"-"+"30"+" "+"23:59:59";
-				    System.out.println(lastTime);
-					localDate2 = formatter2.parseLocalDate(bartDateFormat.format(extractTime).toString()); 
-				 
-				}
-				else{
-					 localDate2 = formatter2.parseLocalDate(extractTime.toString());
-				}
-				*/
-				
-				/*System.out.println("yearOfCentury: " + "20"+localDate.getYearOfCentury()); 
-				System.out.println("monthOfYear: " + localDate.getMonthOfYear()); 
-				System.out.println("dayOfMonth: " + localDate.getDayOfMonth());*/
 				
 				
 			   /*规范化类型*/
 			   System.out.println("******分割线******");
 			   JudgeMent judgeMent = new JudgeMent();
 			   System.out.println("stdProvinceCode");
-			   int stdProvinceCode = judgeMent.judgeInt(dataBaseUser.getStdProvinceCode(),"stdProvinceCode",dataBaseUser.getDataID());
+			   int stdProvinceCode = judgeMent.judgeInt(dataBaseUser.getStdProvinceCode(),"stdProvinceCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdCityCode");
-			   int stdCityCode = judgeMent.judgeInt(dataBaseUser.getStdCityCode(),"stdCityCode",dataBaseUser.getDataID());
+			   int stdCityCode = judgeMent.judgeInt(dataBaseUser.getStdCityCode(),"stdCityCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdProductPrice");
-			   float stdProductPrice = judgeMent.judgeFloat(dataBaseUser.getStdProductPrice(),"stdProductPrice",dataBaseUser.getDataID());
+			   float stdProductPrice = judgeMent.judgeFloat(dataBaseUser.getStdProductPrice(),"stdProductPrice",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdProductPromPrice");
-			   float stdProductPromPrice = judgeMent.judgeFloat(dataBaseUser.getStdProductPromPrice(),"stdProductPromPrice",dataBaseUser.getDataID());
+			   float stdProductPromPrice = judgeMent.judgeFloat(dataBaseUser.getStdProductPromPrice(),"stdProductPromPrice",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdPrice");
-			   float stdPrice =judgeMent.judgeFloat(dataBaseUser.getStdPrice(),"stdPrice",dataBaseUser.getDataID());
+			   float stdPrice =judgeMent.judgeFloat(dataBaseUser.getStdPrice(),"stdPrice",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdDeliveryProvinceCode");
-			   int stdDeliveryProvinceCode = judgeMent.judgeInt(dataBaseUser.getStdDeliveryProvinceCode(),"stdDeliveryProvinceCode",dataBaseUser.getDataID());
+			   int stdDeliveryProvinceCode = judgeMent.judgeInt(dataBaseUser.getStdDeliveryProvinceCode(),"stdDeliveryProvinceCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdDeliveryCityCode");
-			   int stdDeliveryCityCode = judgeMent.judgeInt(dataBaseUser.getStdDeliveryCityCode(),"stdDeliveryCityCode",dataBaseUser.getDataID());
+			   int stdDeliveryCityCode = judgeMent.judgeInt(dataBaseUser.getStdDeliveryCityCode(),"stdDeliveryCityCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdStoreLocationProvinceCode");
-			   int stdStoreLocationProvinceCode = judgeMent.judgeInt(dataBaseUser.getStdStoreLocationProvinceCode(),"stdStoreLocationProvinceCode",dataBaseUser.getDataID());
+			   int stdStoreLocationProvinceCode = judgeMent.judgeInt(dataBaseUser.getStdStoreLocationProvinceCode(),"stdStoreLocationProvinceCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("stdStoreLocationCityCode");
-			   int stdStoreLocationCityCode = judgeMent.judgeInt(dataBaseUser.getStdStoreLocationCityCode(),"stdStoreLocationCityCode",dataBaseUser.getDataID());
+			   int stdStoreLocationCityCode = judgeMent.judgeInt(dataBaseUser.getStdStoreLocationCityCode(),"stdStoreLocationCityCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("StdWeightValue");
-			   float StdWeightValue = judgeMent.judgeFloat(dataBaseUser.getStdWeightValue(),"StdWeightValue",dataBaseUser.getDataID());
+			   float StdWeightValue = judgeMent.judgeFloat(dataBaseUser.getStdWeightValue(),"StdWeightValue",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("productLocationCode");
-			   int productLocationCode = judgeMent.judgeInt(String.valueOf(judgeMent.getLocationCode(stdProvinceCode, stdCityCode)),"productLocationCode",dataBaseUser.getDataID());
+			   int productLocationCode = judgeMent.judgeInt(String.valueOf(judgeMent.getLocationCode(stdProvinceCode, stdCityCode)),"productLocationCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   System.out.println("storeLocationCode");
-			   int storeLocationCode = judgeMent.judgeInt(String.valueOf(judgeMent.getLocationCode(stdStoreLocationProvinceCode, stdStoreLocationCityCode)),"storeLocationCode",dataBaseUser.getDataID());
+			   int storeLocationCode = judgeMent.judgeInt(String.valueOf(judgeMent.getLocationCode(stdStoreLocationProvinceCode, stdStoreLocationCityCode)),"storeLocationCode",dataBaseUser.getDataID(),productInnerID,extractTimeStr,pstmt);
 			   
 			   
 			   /*生成sql数据*/
 			   System.out.println("******分割线******");
 			   System.out.println("开始更新啦！");
-			   String updateStdProvince="update "+table+"  set "+judgeMent.updateNull("std_province", dataBaseUser.getStdProvince())+
+		        String updateStdProvince="update "+table+"  set "+judgeMent.updateNull("std_province", dataBaseUser.getStdProvince())+
 		         ","+judgeMent.updateNull("std_provinceCode", stdProvinceCode)+
 		         ","+judgeMent.updateNull("std_city",dataBaseUser.getStdCity())+
 			     ","+judgeMent.updateNull("std_cityCode",stdCityCode)+
@@ -671,7 +648,9 @@ public  class Process {
 			     " where dataID="+ dataBaseUser.getDataID();
 			   System.out.println(updateStdProvince);
 			    stmt1.executeUpdate(updateStdProvince); 
-			    
+			    DBCPconn.close();
+
+			   
 		    }
 		    System.out.println("总共执行了："+count+"行");
 		} catch (Exception e) {
