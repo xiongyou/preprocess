@@ -1,10 +1,7 @@
 package com.louis.IDataPreProcess;
 
-import java.sql.Connection;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.sql.PreparedStatement;
 
 /** 
  * @author Michael2397 2692613726@qq.com: 
@@ -13,11 +10,11 @@ import java.sql.PreparedStatement;
  */
 public interface IDataPreProcess {
 	//得到标准省份
-	public HashMap<String,String> getStdProvince(String orignalProvince,String space,String count,String ID,List<HashMap<String,String>> regionCodeName,int productInnerID,String extractTimeStr,PreparedStatement pstmt,Connection DBCPconn);
+	public HashMap<String,String> getStdProvince(String orignalProvince,String space,String count,String ID,List<HashMap<String,String>> regionCodeName );
 	//得到标准城市
-	public HashMap<String, String> getStdCity(String orignalCity,String space,String count,String wholeProvinceCode,String ID,List<HashMap<String,String>> regionCodeName,int productInnerID,String extractTimeStr,PreparedStatement pstmt);
+	public HashMap<String, String> getStdCity(String orignalCity,String space,String count,String wholeProvinceCode,String ID,List<HashMap<String,String>> regionCodeName);
 	//得到标准形式的价格
-	public String getStdProductPrice(String orignalProductPrice,String space,String count,String ID,int productInnerID,String extractTimeStr,PreparedStatement pstmt);
+	public String getStdProductPrice(String orignalProductPrice,String space,String count,String ID);
 	//得到标准形式的促销价格
 	public String getStdProductPromPrice(String orignalProductPromPrice,String space,String ID);
 	//得到标准形式的发货省份
@@ -29,7 +26,7 @@ public interface IDataPreProcess {
 	//得到标准形式的店铺城市
 	public String getStdStoreLocationCity(String orignalCity);
 	//得到标准形式的重量值
-    public String getStdWeightValue(String orignalWeight,String space,String count,String ID,int productInnerID,String extractTimeStr,PreparedStatement pstmt);
+    public String getStdWeightValue(String orignalWeight,String space,String count,String ID);
     //得到城市的编码
     public String getCityCode(String stdCity);
     //得到发货地城市的编码
@@ -37,5 +34,5 @@ public interface IDataPreProcess {
     //得到店铺城市的编码
     public String getStoreLocationCityCode(String stdStoreLocationCity);
     //得到标准形式的发货省份和城市
-    public List<HashMap<String,String>> getStdDelivery(String orignalDelivery,String space,String count,String ID,List<HashMap<String,String>> regionCodeName,int productInnerID,String extractTimeStr,PreparedStatement pstmt);
+    public List<HashMap<String,String>> getStdDelivery(String orignalDelivery,String space,String count,String ID,List<HashMap<String,String>> regionCodeName);
 }

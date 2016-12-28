@@ -3,7 +3,6 @@ package com.louis.DataPreProcessImpl;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.sql.Connection;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,13 +16,10 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.poi.ss.formula.ptg.Ptg;
 
 import com.louis.IDataPreProcess.IDataPreProcess;
 import com.louis.util.ExtractFromExcel;
 import com.louis.util.SaveError;
-
-import java.sql.PreparedStatement;
 
 /** 
  * @author Michael2397 2692613726@qq.com: 
@@ -36,7 +32,7 @@ public class DataPreProcessImpl implements IDataPreProcess {
 	/*
 	 * 获取标准省份
 	 * */
-	public HashMap<String,String> getStdProvince(String orignalProvince,String space,String count,String ID,List<HashMap<String,String>> regionCodeName,int productInnerID,String extractTimeStr,PreparedStatement pstmt,Connection DBCPconn) {
+	public HashMap<String,String> getStdProvince(String orignalProvince,String space,String count,String ID,List<HashMap<String,String>> regionCodeName ) {
 		logger.setLevel(Level.DEBUG);
 		//保存返回的省份和编号
 		HashMap<String,String> regionCode = new HashMap<>();
@@ -89,13 +85,6 @@ public class DataPreProcessImpl implements IDataPreProcess {
 				//使用输出错误到文件中
 				SaveError.errorAsText(orignalProvince, filePath);
 				regionCode.put("","");
-				pstmt.setInt(1, Integer.parseInt(ID));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, orignalProvince+"    第"+count+"行:"+space+"    "+ID);
-				pstmt.setString(4, extractTimeStr);
-				
-				pstmt.execute();
-				
 				
 			}else if(stdProvince.size()==1){
 				province = stdProvince.get(0);
@@ -115,7 +104,7 @@ public class DataPreProcessImpl implements IDataPreProcess {
 	/*
 	 * 获取标准城市
 	 * */
-	public HashMap<String, String> getStdCity(String orignalCity,String space,String count,String wholeProvinceCode,String ID,List<HashMap<String,String>> regionCodeName,int productInnerID,String extractTimeStr,PreparedStatement pstmt ) {
+	public HashMap<String, String> getStdCity(String orignalCity,String space,String count,String wholeProvinceCode,String ID,List<HashMap<String,String>> regionCodeName ) {
 		logger.setLevel(Level.DEBUG);
 		int isBreak = 0;
 		//保存返回的城市和编号
@@ -182,12 +171,6 @@ public class DataPreProcessImpl implements IDataPreProcess {
 				//使用输出错误到文件中
 				SaveError.errorAsText(orignalCity, filePath);
 				cityAndCode.put("","");
-				pstmt.setInt(1, Integer.parseInt(ID));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, orignalCity+"-第"+count+"行:"+space+"-"+ID+"-标准城市大小："+stdCity.size());
-				pstmt.setString(4, extractTimeStr);
-				
-				pstmt.execute();
 				
 			}else if(stdCity.size()==1){
 				city = stdCity.get(0);
@@ -206,7 +189,7 @@ public class DataPreProcessImpl implements IDataPreProcess {
     /*
      * 获取发货地的标准省份和标准城市，注意：其中一个会出现null的情况
      * */
-	public List<HashMap<String,String>> getStdDelivery(String orignalDelivery,String space,String count,String ID,List<HashMap<String,String>> regionCodeName,int productInnerID,String extractTimeStr,PreparedStatement pstmt){
+	public List<HashMap<String,String>> getStdDelivery(String orignalDelivery,String space,String count,String ID,List<HashMap<String,String>> regionCodeName){
 		logger.setLevel(Level.DEBUG);
 		//保存返回的<省份，省份编号>,<城市，城市编号>
 		List<HashMap<String, String>> list = new ArrayList<>();
@@ -301,12 +284,6 @@ public class DataPreProcessImpl implements IDataPreProcess {
 				cityAndCode.put("", "");
 				//使用输出错误到文件中
 				SaveError.errorAsText(orignalDelivery, filePath);	
-				pstmt.setInt(1, Integer.parseInt(ID));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, orignalDelivery+"-第"+count+"行:"+space+"-"+ID+"-发货地址或者店铺地址大小:"+stdCity.size());
-				pstmt.setString(4, extractTimeStr);
-			
-				pstmt.execute();
 			}else if(stdCity.size()==1&&stdProvince.size()==0){
 				city = stdCity.get(0);
 				code = stdCityCode.get(0);
@@ -336,12 +313,6 @@ public class DataPreProcessImpl implements IDataPreProcess {
 				logger.warn(orignalDelivery+"-第"+count+"行:"+space+"-"+ID+"-发货地址或者店铺地址大小:"+stdCity.size());
 				//使用输出错误到文件中
 				SaveError.errorAsText(orignalDelivery, filePath);	
-				pstmt.setInt(1, Integer.parseInt(ID));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, orignalDelivery+"-第"+count+"行:"+space+"-"+ID+"-发货地址或者店铺地址大小:"+stdCity.size());
-				pstmt.setString(4, extractTimeStr);
-				
-				pstmt.execute();
 			}
 			list.add(provinceAndCode);
 			list.add(cityAndCode);
@@ -355,7 +326,7 @@ public class DataPreProcessImpl implements IDataPreProcess {
 		return list;
 	}
 	@Override
-	public String getStdProductPrice(String orignalProductPrice,String space,String count,String ID,int productInnerID,String extractTimeStr,PreparedStatement pstmt) {
+	public String getStdProductPrice(String orignalProductPrice,String space,String count,String ID) {
 		logger.setLevel(Level.DEBUG);
 		String[] strError = {"-",",","，"};
 		String stdProductPrice = "";
@@ -392,12 +363,6 @@ public class DataPreProcessImpl implements IDataPreProcess {
 				//使用输出错误到文件中
 				try {
 					SaveError.errorAsText(orignalProductPrice, filePath);
-					pstmt.setInt(1, Integer.parseInt(ID));
-					pstmt.setInt(2,productInnerID);
-					pstmt.setString(3, orignalProductPrice+"-第"+count+"行:"+space+"-"+ID);
-					pstmt.setString(4, extractTimeStr);
-					
-					pstmt.execute();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -441,7 +406,7 @@ public class DataPreProcessImpl implements IDataPreProcess {
 	}
 
 	@Override
-	public String getStdWeightValue(String orignalWeightValue,String space,String count,String ID,int productInnerID,String extractTimeStr,PreparedStatement pstmt) {	
+	public String getStdWeightValue(String orignalWeightValue,String space,String count,String ID) {	
 		logger.setLevel(Level.DEBUG);
 		//保存标准数据
 		String stdWightValue = "";
@@ -566,12 +531,6 @@ public class DataPreProcessImpl implements IDataPreProcess {
 				//使用log4j
 				logger.warn(orignalWeightValue+"-第"+count+"行:"+space+"-"+ID);
 				//使用输出错误到文件中
-				pstmt.setInt(1, Integer.parseInt(ID));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, orignalWeightValue+"-第"+count+"行:"+space+"-"+ID);
-				pstmt.setString(4, extractTimeStr);
-	
-				pstmt.execute();
 				try {
 					SaveError.errorAsText(orignalWeightValue, filePath);
 				} catch (IOException e) {

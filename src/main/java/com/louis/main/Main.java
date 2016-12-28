@@ -18,6 +18,7 @@ public class Main {
 		Process process = new Process();
 		try {			
 			process.newTable();
+			process.errorTable();
 			process.getValues();
 		} catch (Exception e) {
 			// TODO: handle exception

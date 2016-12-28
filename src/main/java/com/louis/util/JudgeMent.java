@@ -1,7 +1,5 @@
 package com.louis.util;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,7 +11,7 @@ import org.apache.log4j.Logger;
 public class JudgeMent {
 	public static Logger logger = Logger.getLogger("com.foo");
 	//将字符串中的数字转换成int类型
-	public int judgeInt(String string,String stringName,String stringId,int productInnerID,String extractTimeStr,PreparedStatement pstmt){
+	public int judgeInt(String string,String stringName,String stringId){
 		logger.setLevel(Level.DEBUG);
 		int shuzi =0 ;
 		if(string.contains("-1")){
@@ -26,26 +24,12 @@ public class JudgeMent {
 		}else{
 			shuzi = -1; //不是正常的数字，更新数据库时为null并且保存到日志
 			logger.warn(string+"不是数字格式"+"-----"+stringName+"-------"+stringId);
-			try {
-				pstmt.setInt(1, Integer.parseInt(stringId));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, string+"不是数字格式"+"-----"+stringName+"-------"+stringId);
-				pstmt.setString(4, extractTimeStr);
-				pstmt.execute();
-			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
 		}
 		return shuzi;
 	}
 	
 	//将字符串中的数字转换成float类型
-	public float judgeFloat(String string,String stringName,String stringId,int productInnerID,String extractTimeStr,PreparedStatement pstmt){
+	public float judgeFloat(String string,String stringName,String stringId){
 		logger.setLevel(Level.DEBUG);
 		float shuzi = 0;
 		if(string.matches("^[0-9]+$")||string.matches("^\\d+\\.\\d+$")){
@@ -55,19 +39,6 @@ public class JudgeMent {
 		}else{
 			shuzi = -1; //不是正常的数字，更新数据库时为null并且保存到日志
 			logger.warn(string+"不是数字格式"+"-----"+stringName+"-------"+stringId);
-			try {
-				pstmt.setInt(1, Integer.parseInt(stringId));
-				pstmt.setInt(2,productInnerID);
-				pstmt.setString(3, string+"不是数字格式"+"-----"+stringName+"-------"+stringId);
-				pstmt.setString(4, extractTimeStr);
-				pstmt.execute();
-			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 		return shuzi;
 	}
