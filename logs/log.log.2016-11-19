@@ -1,0 +1,291 @@
+2016-11-19 22:02:08.008 [main:0] - [WARN] 九华山-第1826行:orignalCity-17663059-标准城市大小：0
+2016-11-19 22:03:07.007 [main:58983] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费    第2872行:orignalProvince    17664105
+2016-11-19 22:03:21.021 [main:73622] - [WARN] 北京 河北    第2995行:orignalProvince    17664228
+2016-11-19 22:03:53.053 [main:105415] - [WARN] 同里镇-第3815行:orignalCity-17665048-标准城市大小：0
+2016-11-19 22:50:19.019 [main:0] - [WARN] 九华山-第861行:orignalCity-1817-标准城市大小：0
+2016-11-19 22:50:37.037 [main:17544] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费    第1214行:orignalProvince    2883
+2016-11-19 22:50:39.039 [main:19980] - [WARN] 北京 河北    第1260行:orignalProvince    2985
+2016-11-19 22:51:48.048 [main:89159] - [WARN] 重庆 四川    第2812行:orignalProvince    7785
+2016-11-19 22:51:53.053 [main:94190] - [WARN] 海外-第2926行:deliveryStartArea-8294-发货地址或者店铺地址大小:0
+2016-11-19 22:52:18.018 [main:119354] - [WARN] 5k不是数字格式
+2016-11-19 22:52:36.036 [main:136488] - [WARN] 重庆 四川 重庆    第3923行:orignalProvince    10182
+2016-11-19 22:52:40.040 [main:140544] - [WARN] 北京 重庆 广东 云南    第4005行:orignalProvince    10369
+2016-11-19 22:52:46.046 [main:146773] - [WARN] 其他/other-第4144行:weight-10608
+2016-11-19 22:53:13.013 [main:173451] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第4756行:orignalProvince    12132
+2016-11-19 22:53:13.013 [main:173994] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第4771行:orignalProvince    12158
+2016-11-19 22:53:13.013 [main:174052] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第4773行:orignalProvince    12163
+2016-11-19 22:53:21.021 [main:182001] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建    第4953行:orignalProvince    12623
+2016-11-19 22:53:41.041 [main:202210] - [WARN] 九华山-第5420行:orignalCity-13547-标准城市大小：0
+2016-11-19 22:54:22.022 [main:243203] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第6316行:orignalProvince    15445
+2016-11-19 22:55:01.001 [main:281605] - [WARN] 300克X20不是数字格式
+2016-11-19 22:57:39.039 [main:439567] - [WARN] 重庆 四川 贵州    第10952行:orignalProvince    25199
+2016-11-19 22:57:52.052 [main:453328] - [WARN] 海外-第11267行:deliveryStartArea-25866-发货地址或者店铺地址大小:0
+2016-11-19 22:58:12.012 [main:472530] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第11756行:orignalProvince    26950
+2016-11-19 22:58:35.035 [main:496163] - [WARN] 1x55x1200不是数字格式
+2016-11-19 22:59:07.007 [main:527710] - [WARN] 1500克1500不是数字格式
+2016-11-19 22:59:43.043 [main:564261] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北和福建）其它省份补运费。    第13661行:orignalProvince    30878
+2016-11-19 23:03:11.011 [main:772114] - [WARN] 500克  （1斤25个左右）250不是数字格式
+2016-11-19 23:03:52.052 [main:812422] - [WARN] 千岛湖-第18795行:orignalCity-39434-标准城市大小：0
+2016-11-19 23:04:00.000 [main:820805] - [WARN] 1x24x500不是数字格式
+2016-11-19 23:04:11.011 [main:832159] - [WARN] 8寸-第19201行:weight-40015
+2016-11-19 23:04:38.038 [main:858773] - [WARN] 24x1x330不是数字格式
+2016-11-19 23:05:03.003 [main:883903] - [WARN] 1x12x468不是数字格式
+2016-11-19 23:05:32.032 [main:912589] - [WARN] 1x500x9000不是数字格式
+2016-11-19 23:05:46.046 [main:926644] - [WARN] 500/1000不是数字格式
+2016-11-19 23:05:49.049 [main:929731] - [WARN] 海外-第21206行:deliveryStartArea-43345-发货地址或者店铺地址大小:0
+2016-11-19 23:05:54.054 [main:934665] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:05:54.054 [main:934974] - [WARN] 4x1x1000不是数字格式
+2016-11-19 23:06:08.008 [main:948794] - [WARN] 12x1x250不是数字格式
+2016-11-19 23:06:11.011 [main:952335] - [WARN] 重庆 四川    第21658行:orignalProvince    44463
+2016-11-19 23:06:34.034 [main:974912] - [WARN] 其它国家其他    第22133行:orignalProvince    45499
+2016-11-19 23:06:36.036 [main:976468] - [WARN] 海外-第22167行:deliveryStartArea-45551-发货地址或者店铺地址大小:0
+2016-11-19 23:06:36.036 [main:976600] - [WARN] 荷兰-第22170行:deliveryStartArea-45558-发货地址或者店铺地址大小:0
+2016-11-19 23:06:39.039 [main:980318] - [WARN] 重庆 福建    第22257行:orignalProvince    45686
+2016-11-19 23:06:40.040 [main:981178] - [WARN] 北京 天津 吉林    第22277行:orignalProvince    45715
+2016-11-19 23:06:44.044 [main:984605] - [WARN] 千岛湖-第22359行:orignalCity-45825-标准城市大小：0
+2016-11-19 23:07:20.020 [main:1020743] - [WARN] 海外-第23145行:deliveryStartArea-46984-发货地址或者店铺地址大小:0
+2016-11-19 23:07:23.023 [main:1024092] - [WARN] 1磅-第23215行:weight-47079
+2016-11-19 23:07:30.030 [main:1031352] - [WARN] 海外-第23386行:deliveryStartArea-47351-发货地址或者店铺地址大小:0
+2016-11-19 23:08:11.011 [main:1072223] - [WARN] 荷兰-第24237行:deliveryStartArea-48390-发货地址或者店铺地址大小:0
+2016-11-19 23:08:47.047 [main:1107560] - [WARN] 24x1x250不是数字格式
+2016-11-19 23:10:31.031 [main:1212040] - [WARN] 1磅-第27455行:weight-52539
+2016-11-19 23:11:08.008 [main:1248685] - [WARN] 可选-第28397行:weight-53780
+2016-11-19 23:11:11.011 [main:1251998] - [WARN] 60ml60不是数字格式
+2016-11-19 23:11:18.018 [main:1258551] - [WARN] 24x1x330不是数字格式
+2016-11-19 23:11:21.021 [main:1262141] - [WARN] 24x1x250不是数字格式
+2016-11-19 23:11:21.021 [main:1262227] - [WARN] 12x1x250不是数字格式
+2016-11-19 23:11:21.021 [main:1262375] - [WARN] 12x1x250不是数字格式
+2016-11-19 23:11:22.022 [main:1262709] - [WARN] 12x1x250不是数字格式
+2016-11-19 23:11:27.027 [main:1267620] - [WARN] 2磅-第28843行:weight-54345
+2016-11-19 23:11:57.057 [main:1297646] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:12:05.005 [main:1305829] - [WARN] 24x1x330不是数字格式
+2016-11-19 23:12:05.005 [main:1305888] - [WARN] 18x1x500不是数字格式
+2016-11-19 23:12:06.006 [main:1306497] - [WARN] 24x1x250不是数字格式
+2016-11-19 23:12:23.023 [main:1324220] - [WARN] 24x1x330不是数字格式
+2016-11-19 23:12:39.039 [main:1339700] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:12:43.043 [main:1343534] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:13:07.007 [main:1368301] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:13:18.018 [main:1378844] - [WARN] 60ml60不是数字格式
+2016-11-19 23:13:24.024 [main:1384769] - [WARN] 1x12x486不是数字格式
+2016-11-19 23:13:24.024 [main:1384880] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:13:35.035 [main:1395421] - [WARN] 1x6x310不是数字格式
+2016-11-19 23:13:40.040 [main:1401046] - [WARN] 1x6x468不是数字格式
+2016-11-19 23:13:41.041 [main:1402026] - [WARN] 1x12x330不是数字格式
+2016-11-19 23:13:45.045 [main:1405638] - [WARN] 1x6x486不是数字格式
+2016-11-19 23:13:45.045 [main:1405896] - [WARN] 1x6x500不是数字格式
+2016-11-19 23:13:46.046 [main:1406626] - [WARN] 1x6x486不是数字格式
+2016-11-19 23:14:05.005 [main:1426324] - [WARN] 12x1x1000不是数字格式
+2016-11-19 23:14:08.008 [main:1428816] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:14:09.009 [main:1429791] - [WARN] 日本-第32598行:deliveryStartArea-59511-发货地址或者店铺地址大小:0
+2016-11-19 23:14:14.014 [main:1434514] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:14:29.029 [main:1449955] - [WARN] 美国-第33043行:deliveryStartArea-60134-发货地址或者店铺地址大小:0
+2016-11-19 23:15:18.018 [main:1498888] - [WARN] 港澳台其他    第34138行:orignalProvince    61728
+2016-11-19 23:15:22.022 [main:1502801] - [WARN] 12x1x250不是数字格式
+2016-11-19 23:15:27.027 [main:1507671] - [WARN] 24x1x250不是数字格式
+2016-11-19 23:15:28.028 [main:1508585] - [WARN] 海外-第34365行:deliveryStartArea-62069-发货地址或者店铺地址大小:0
+2016-11-19 23:15:49.049 [main:1530170] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:15:50.050 [main:1530625] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:15:50.050 [main:1530690] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:15:51.051 [main:1532248] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:15:52.052 [main:1532682] - [WARN] 1x12x486不是数字格式
+2016-11-19 23:15:56.056 [main:1536434] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:15:56.056 [main:1536473] - [WARN] 日本-第34986行:deliveryStartArea-63138-发货地址或者店铺地址大小:0
+2016-11-19 23:15:56.056 [main:1537107] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:15:58.058 [main:1538616] - [WARN] 1x24x250不是数字格式
+2016-11-19 23:15:59.059 [main:1540240] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:16:00.000 [main:1540418] - [WARN] 1x24x250不是数字格式
+2016-11-19 23:16:00.000 [main:1540474] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:16:00.000 [main:1540502] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:16:00.000 [main:1540569] - [WARN] 1x1x250不是数字格式
+2016-11-19 23:16:00.000 [main:1540632] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:16:01.001 [main:1542197] - [WARN] 1x6x250不是数字格式
+2016-11-19 23:16:01.001 [main:1542344] - [WARN] 1x24x250不是数字格式
+2016-11-19 23:16:06.006 [main:1546511] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:16:07.007 [main:1548164] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:16:08.008 [main:1548544] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:16:10.010 [main:1550760] - [WARN] 1x6x330不是数字格式
+2016-11-19 23:16:22.022 [main:1562747] - [WARN] 150壳-第35581行:weight-64081
+2016-11-19 23:16:22.022 [main:1562904] - [WARN] 1x6x330不是数字格式
+2016-11-19 23:16:24.024 [main:1564571] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:16:24.024 [main:1564852] - [WARN] 1x1x330不是数字格式
+2016-11-19 23:16:31.031 [main:1572170] - [WARN] 荷兰-第35798行:deliveryStartArea-64423-发货地址或者店铺地址大小:0
+2016-11-19 23:16:32.032 [main:1572582] - [WARN] 荷兰-第35807行:deliveryStartArea-64433-发货地址或者店铺地址大小:0
+2016-11-19 23:18:08.008 [main:1669092] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:18:34.034 [main:1695195] - [WARN] 1x12x946不是数字格式
+2016-11-19 23:18:35.035 [main:1696041] - [WARN] 1x12x946不是数字格式
+2016-11-19 23:18:54.054 [main:1714555] - [WARN] 1x1x5000不是数字格式
+2016-11-19 23:19:38.038 [main:1758777] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:19:39.039 [main:1759870] - [WARN] 1x24x330不是数字格式
+2016-11-19 23:19:39.039 [main:1759967] - [WARN] 1x12x330不是数字格式
+2016-11-19 23:19:39.039 [main:1760367] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:19:54.054 [main:1775098] - [WARN] 24x1x250不是数字格式
+2016-11-19 23:19:56.056 [main:1777006] - [WARN] 12x1x250不是数字格式
+2016-11-19 23:19:58.058 [main:1778831] - [WARN] 日本-第40498行:deliveryStartArea-72393-发货地址或者店铺地址大小:0
+2016-11-19 23:20:05.005 [main:1786023] - [WARN] 其他-第40669行:weight-72705
+2016-11-19 23:20:07.007 [main:1787673] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:20:22.022 [main:1803320] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:20:26.026 [main:1806446] - [WARN] 1x12x500不是数字格式
+2016-11-19 23:21:52.052 [main:1892916] - [WARN] 其他-第43156行:weight-76444
+2016-11-19 23:21:53.053 [main:1893419] - [WARN] 其他-第43170行:weight-76464
+2016-11-19 23:21:53.053 [main:1893718] - [WARN] 其他-第43179行:weight-76475
+2016-11-19 23:21:53.053 [main:1894095] - [WARN] 其他-第43187行:weight-76489
+2016-11-19 23:21:53.053 [main:1894277] - [WARN] 其他-第43192行:weight-76500
+2016-11-19 23:23:39.039 [main:1999667] - [WARN] 750毫升750不是数字格式
+2016-11-19 23:28:15.015 [main:2276246] - [WARN] 200-600不是数字格式
+2016-11-19 23:28:18.018 [main:2278660] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:89243-weight
+2016-11-19 23:28:18.018 [main:2278989] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:89274-weight
+2016-11-19 23:28:20.020 [main:2280490] - [WARN] 1k不是数字格式
+2016-11-19 23:28:23.023 [main:2283450] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:89496-weight
+2016-11-19 23:28:23.023 [main:2283521] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:89498-weight
+2016-11-19 23:28:26.026 [main:2287299] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:89713-weight
+2016-11-19 23:28:27.027 [main:2287985] - [WARN] 6k不是数字格式
+2016-11-19 23:28:32.032 [main:2292593] - [WARN] 400-800不是数字格式
+2016-11-19 23:28:32.032 [main:2292624] - [WARN] 400-800不是数字格式
+2016-11-19 23:28:32.032 [main:2292750] - [WARN] 200-400不是数字格式
+2016-11-19 23:28:32.032 [main:2292877] - [WARN] 200-400不是数字格式
+2016-11-19 23:28:32.032 [main:2293374] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:90052-weight
+2016-11-19 23:28:40.040 [main:2301132] - [WARN] 1k不是数字格式
+2016-11-19 23:28:47.047 [main:2308383] - [WARN] 1k不是数字格式
+2016-11-19 23:28:48.048 [main:2308416] - [WARN] 1k不是数字格式
+2016-11-19 23:28:48.048 [main:2308513] - [WARN] 1k不是数字格式
+2016-11-19 23:28:50.050 [main:2310794] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:90809-weight
+2016-11-19 23:28:56.056 [main:2316793] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:91023-weight
+2016-11-19 23:28:57.057 [main:2317559] - [WARN] 1k不是数字格式
+2016-11-19 23:28:58.058 [main:2318432] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:91082-weight
+2016-11-19 23:28:58.058 [main:2318615] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:91090-weight
+2016-11-19 23:28:59.059 [main:2319967] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:91129-weight
+2016-11-19 23:29:00.000 [main:2320917] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:91174-weight
+2016-11-19 23:29:01.001 [main:2321925] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:91213-weight
+2016-11-19 23:29:02.002 [main:2322457] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:91271-weight
+2016-11-19 23:29:02.002 [main:2323049] - [WARN] 1k不是数字格式
+2016-11-19 23:29:03.003 [main:2324300] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:91383-weight
+2016-11-19 23:29:21.021 [main:2341732] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:92117-weight
+2016-11-19 23:29:21.021 [main:2341812] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:92118-weight
+2016-11-19 23:29:21.021 [main:2341846] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:92119-weight
+2016-11-19 23:29:21.021 [main:2341880] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:92120-weight
+2016-11-19 23:29:27.027 [main:2348269] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:92330-weight
+2016-11-19 23:29:28.028 [main:2348772] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:92346-weight
+2016-11-19 23:29:28.028 [main:2348803] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:92353-weight
+2016-11-19 23:29:30.030 [main:2350884] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:92473-weight
+2016-11-19 23:29:32.032 [main:2352855] - [WARN] 1k不是数字格式
+2016-11-19 23:29:32.032 [main:2352893] - [WARN] 1k不是数字格式
+2016-11-19 23:29:32.032 [main:2352947] - [WARN] 1k不是数字格式
+2016-11-19 23:29:32.032 [main:2353042] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:92547-weight
+2016-11-19 23:29:37.037 [main:2358131] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:92876-weight
+2016-11-19 23:30:09.009 [main:2390039] - [WARN] 20+ 500不是数字格式
+2016-11-19 23:32:30.030 [main:2530552] - [WARN] java.lang.NumberFormatException: For input string: "276,'[Product20150114-7.xls]sheet1'!B:D,2,0"-ID:97581-weight
+2016-11-19 23:33:38.038 [main:2599385] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:99406-weight
+2016-11-19 23:33:38.038 [main:2599385] - [WARN] 490*2不是数字格式
+2016-11-19 23:34:13.013 [main:2634282] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:100265-weight
+2016-11-19 23:34:13.013 [main:2634282] - [WARN] 218*2不是数字格式
+2016-11-19 23:34:35.035 [main:2655661] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:100890-weight
+2016-11-19 23:34:35.035 [main:2655661] - [WARN] 700*2不是数字格式
+2016-11-19 23:34:37.037 [main:2658394] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:100944-weight
+2016-11-19 23:34:37.037 [main:2658395] - [WARN] 600*2不是数字格式
+2016-11-19 23:34:49.049 [main:2669890] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:101258-weight
+2016-11-19 23:34:49.049 [main:2669891] - [WARN] 490*2不是数字格式
+2016-11-19 23:34:53.053 [main:2673971] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:101371-weight
+2016-11-19 23:34:53.053 [main:2673972] - [WARN] 350*2不是数字格式
+2016-11-19 23:35:43.043 [main:2724182] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:102635-weight
+2016-11-19 23:35:43.043 [main:2724182] - [WARN] 170*2不是数字格式
+2016-11-19 23:35:43.043 [main:2724221] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:102636-weight
+2016-11-19 23:35:43.043 [main:2724222] - [WARN] 170*3不是数字格式
+2016-11-19 23:36:28.028 [main:2768548] - [WARN] 300克（30X10)克X10不是数字格式
+2016-11-19 23:36:31.031 [main:2771798] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:103938-weight
+2016-11-19 23:36:31.031 [main:2771798] - [WARN] 95*8不是数字格式
+2016-11-19 23:36:37.037 [main:2777509] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:104098-weight
+2016-11-19 23:36:37.037 [main:2777509] - [WARN] 490*2不是数字格式
+2016-11-19 23:36:42.042 [main:2782884] - [WARN] 160G*8不是数字格式
+2016-11-19 23:37:12.012 [main:2812654] - [WARN] 500m-第64901行:weight-105036
+2016-11-19 23:37:13.013 [main:2813579] - [WARN] 500m-第64922行:weight-105057
+2016-11-19 23:37:13.013 [main:2813708] - [WARN] 220粒-第64925行:weight-105060
+2016-11-19 23:37:13.013 [main:2813737] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:105061-weight
+2016-11-19 23:37:13.013 [main:2813738] - [WARN] 180*2不是数字格式
+2016-11-19 23:38:30.030 [main:2891295] - [WARN] 50ml/瓶*8不是数字格式
+2016-11-19 23:38:32.032 [main:2892626] - [WARN] 50ml*6不是数字格式
+2016-11-19 23:38:32.032 [main:2893377] - [WARN] 473ml*1不是数字格式
+2016-11-19 23:38:34.034 [main:2894659] - [WARN] 800m-第66948行:weight-107310
+2016-11-19 23:40:14.014 [main:2995260] - [WARN] ‘2400-第68910行:weight-109468
+2016-11-19 23:40:21.021 [main:3001665] - [WARN] 2500-3000不是数字格式
+2016-11-19 23:40:30.030 [main:3010580] - [WARN] 7888=""不是数字格式
+2016-11-19 23:40:30.030 [main:3010580] - [WARN] 7888=""不是数字格式
+2016-11-19 23:40:31.031 [main:3011457] - [WARN] 11988=""不是数字格式
+2016-11-19 23:40:31.031 [main:3011457] - [WARN] 11988=""不是数字格式
+2016-11-19 23:41:23.023 [main:3063680] - [WARN] 3*28不是数字格式
+2016-11-19 23:42:13.013 [main:3113511] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:112419-weight
+2016-11-19 23:42:13.013 [main:3113514] - [WARN] 72*2不是数字格式
+2016-11-19 23:42:20.020 [main:3121012] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:112606-weight
+2016-11-19 23:42:20.020 [main:3121013] - [WARN] 300*2不是数字格式
+2016-11-19 23:42:27.027 [main:3127771] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:112789-weight
+2016-11-19 23:42:27.027 [main:3127771] - [WARN] 115*12不是数字格式
+2016-11-19 23:42:27.027 [main:3127991] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:112795-weight
+2016-11-19 23:42:27.027 [main:3127991] - [WARN] 115*12不是数字格式
+2016-11-19 23:42:29.029 [main:3130132] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:112852-weight
+2016-11-19 23:42:29.029 [main:3130132] - [WARN] 115*20不是数字格式
+2016-11-19 23:42:41.041 [main:3141504] - [WARN] 450-600不是数字格式
+2016-11-19 23:43:05.005 [main:3165679] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:113785-weight
+2016-11-19 23:43:05.005 [main:3165679] - [WARN] 100*4不是数字格式
+2016-11-19 23:43:07.007 [main:3167484] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:113832-weight
+2016-11-19 23:43:07.007 [main:3167485] - [WARN] 48*5不是数字格式
+2016-11-19 23:43:07.007 [main:3167647] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:113838-weight
+2016-11-19 23:43:07.007 [main:3167648] - [WARN] 48*5不是数字格式
+2016-11-19 23:43:08.008 [main:3168848] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:113876-weight
+2016-11-19 23:43:08.008 [main:3168848] - [WARN] 85*5不是数字格式
+2016-11-19 23:43:09.009 [main:3169531] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:113893-weight
+2016-11-19 23:43:09.009 [main:3169532] - [WARN] 25*15不是数字格式
+2016-11-19 23:45:14.014 [main:3294419] - [WARN] ’500-第75948行:weight-117140
+2016-11-19 23:45:59.059 [main:3339706] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:118254-weight
+2016-11-19 23:45:59.059 [main:3339708] - [WARN] 225*2不是数字格式
+2016-11-19 23:46:32.032 [main:3373001] - [WARN] java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*
+^-ID:119076-weight
+2016-11-19 23:46:32.032 [main:3373002] - [WARN] 250*2不是数字格式
+2016-11-19 23:46:43.043 [main:3383479] - [WARN] java.lang.NumberFormatException: empty String-ID:119352-weight
+2016-11-19 23:46:43.043 [main:3383685] - [WARN] java.lang.NumberFormatException: empty String-ID:119359-weight
+2016-11-19 23:46:43.043 [main:3384119] - [WARN] java.lang.NumberFormatException: empty String-ID:119371-weight
+2016-11-19 23:46:46.046 [main:3386818] - [WARN] java.lang.NumberFormatException: empty String-ID:119455-weight
+2016-11-19 23:46:48.048 [main:3388806] - [WARN] java.lang.NumberFormatException: empty String-ID:119505-weight

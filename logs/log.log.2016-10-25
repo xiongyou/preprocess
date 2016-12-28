@@ -1,0 +1,214 @@
+2016-10-25 16:00:33.033 [main:0] - [WARN] 九华山-第1733行:orignalCity-17505804-标准城市大小：0
+2016-10-25 16:01:15.015 [main:41874] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费    第2749行:orignalProvince    17506850
+2016-10-25 16:01:20.020 [main:46517] - [WARN] 北京 河北    第2870行:orignalProvince    17506973
+2016-10-25 16:01:54.054 [main:81104] - [WARN] 同里镇-第3675行:orignalCity-17507793-标准城市大小：0
+2016-10-25 16:04:40.040 [main:247320] - [WARN] 重庆 四川    第7602行:orignalProvince    17511782
+2016-10-25 16:05:05.005 [main:271582] - [WARN] 海外-第8108行:deliveryStartArea-17512298-发货地址或者店铺地址大小:0
+2016-10-25 16:06:29.029 [main:355965] - [WARN] 重庆 四川 重庆    第9950行:orignalProvince    17514170
+2016-10-25 16:06:37.037 [main:363914] - [WARN] 北京 重庆 广东 云南    第10137行:orignalProvince    17514363
+2016-10-25 16:06:51.051 [main:377873] - [WARN] 其他/other-第10374行:weight-17514603
+2016-10-25 16:08:03.003 [main:450304] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第11845行:orignalProvince    17516132
+2016-10-25 16:08:04.004 [main:451371] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第11869行:orignalProvince    17516158
+2016-10-25 16:08:04.004 [main:451412] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第11870行:orignalProvince    17516155
+2016-10-25 16:08:27.027 [main:474060] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建    第12319行:orignalProvince    17516616
+2016-10-25 16:09:07.007 [main:513937] - [WARN] 九华山-第13221行:orignalCity-17517544-标准城市大小：0
+2016-10-25 16:10:42.042 [main:608582] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第15084行:orignalProvince    17519438
+2016-10-25 16:18:18.018 [main:1065447] - [WARN] 重庆 四川 贵州    第24655行:orignalProvince    17529180
+2016-10-25 16:18:25.025 [main:1071540] - [WARN] 中国大陆    第24788行:orignalProvince    17529315
+2016-10-25 16:18:49.049 [main:1095635] - [WARN] 海外-第25321行:deliveryStartArea-17529850-发货地址或者店铺地址大小:0
+2016-10-25 16:19:34.034 [main:1141239] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北、福建）其它省份补运费。    第26397行:orignalProvince    17530932
+2016-10-25 16:22:29.029 [main:1315730] - [WARN] 江西省江苏、浙江、上海、江西、广东、安徽、湖南、湖北和福建）其它省份补运费。    第30284行:orignalProvince    17534852
+2016-10-25 16:30:01.001 [main:1768099] - [WARN] 千岛湖-第38770行:orignalCity-17543418-标准城市大小：0
+2016-10-25 16:30:15.015 [main:1782349] - [WARN] 澳大利亚-第39075行:deliveryStartArea-17543730-发货地址或者店铺地址大小:0
+2016-10-25 16:30:20.020 [main:1787240] - [WARN] 千岛湖-第39146行:orignalCity-17543800-标准城市大小：0
+2016-10-25 16:30:25.025 [main:1791487] - [WARN] 千岛湖-第39227行:orignalCity-17543880-标准城市大小：0
+2016-10-25 16:30:31.031 [main:1797634] - [WARN] 8寸-第39336行:weight-17543998
+2016-10-25 16:32:53.053 [main:1939806] - [WARN] 中国大陆其他    第42026行:orignalProvince    17546715
+2016-10-25 16:33:26.026 [main:1973001] - [WARN] 海外-第42630行:deliveryStartArea-17547324-发货地址或者店铺地址大小:0
+2016-10-25 16:34:01.001 [main:2007458] - [WARN] java.lang.NumberFormatException: For input string: "1kg" href="//item.taobao.com/item.htm?id=535852847740" target="_blank">名厨世家 鸭霸王〔半固态调味料〕 净含量:1"-ID:17547896-weight
+2016-10-25 16:34:36.036 [main:2042707] - [WARN] 重庆 四川    第43725行:orignalProvince    17548443
+2016-10-25 16:35:01.001 [main:2067967] - [WARN] 8寸-第44289行:weight-17549014
+2016-10-25 16:35:23.023 [main:2089868] - [WARN] 其它国家其他    第44748行:orignalProvince    17549480
+2016-10-25 16:35:25.025 [main:2092314] - [WARN] 海外-第44800行:deliveryStartArea-17549532-发货地址或者店铺地址大小:0
+2016-10-25 16:35:26.026 [main:2092670] - [WARN] 荷兰-第44808行:deliveryStartArea-17549540-发货地址或者店铺地址大小:0
+2016-10-25 16:35:32.032 [main:2099435] - [WARN] 北京 天津 吉林    第44961行:orignalProvince    17549695
+2016-10-25 16:35:38.038 [main:2104745] - [WARN] 千岛湖-第45070行:orignalCity-17549804-标准城市大小：0
+2016-10-25 16:36:30.030 [main:2157040] - [WARN] 海外-第46213行:deliveryStartArea-17550963-发货地址或者店铺地址大小:0
+2016-10-25 16:36:33.033 [main:2160360] - [WARN] 1磅-第46305行:weight-17551056
+2016-10-25 16:36:44.044 [main:2170896] - [WARN] 海外-第46576行:deliveryStartArea-17551325-发货地址或者店铺地址大小:0
+2016-10-25 16:36:44.044 [main:2170967] - [WARN] 千岛湖-第46577行:orignalCity-17551328-标准城市大小：0
+2016-10-25 16:37:28.028 [main:2214587] - [WARN] 荷兰-第47601行:deliveryStartArea-17552380-发货地址或者店铺地址大小:0
+2016-10-25 16:40:30.030 [main:2396826] - [WARN] 1磅-第51705行:weight-17556513
+2016-10-25 16:41:20.020 [main:2447405] - [WARN] 可选-第52935行:weight-17557755
+2016-10-25 16:41:44.044 [main:2470799] - [WARN] 2磅-第53500行:weight-17558319
+2016-10-25 16:42:07.007 [main:2493934] - [WARN] 8寸-第53983行:weight-17558818
+2016-10-25 16:45:10.010 [main:2677058] - [WARN] 中国大陆其他    第58312行:orignalProvince    17563200
+2016-10-25 16:45:50.050 [main:2717025] - [WARN] 美国-第59209行:deliveryStartArea-17564114-发货地址或者店铺地址大小:0
+2016-10-25 16:46:55.055 [main:2782337] - [WARN] 港澳台其他    第60769行:orignalProvince    17565701
+2016-10-25 16:47:09.009 [main:2796142] - [WARN] 海外-第61092行:deliveryStartArea-17566036-发货地址或者店铺地址大小:0
+2016-10-25 16:47:55.055 [main:2842421] - [WARN] 日本-第62152行:deliveryStartArea-17567122-发货地址或者店铺地址大小:0
+2016-10-25 16:48:38.038 [main:2884849] - [WARN] 150壳-第63076行:weight-17568060
+2016-10-25 16:48:55.055 [main:2901673] - [WARN] 荷兰-第63407行:deliveryStartArea-17568401-发货地址或者店铺地址大小:0
+2016-10-25 16:48:55.055 [main:2902159] - [WARN] 荷兰-第63417行:deliveryStartArea-17568415-发货地址或者店铺地址大小:0
+2016-10-25 16:50:32.032 [main:2998466] - [WARN] 日本-第65522行:deliveryStartArea-17570574-发货地址或者店铺地址大小:0
+2016-10-25 16:50:52.052 [main:3019411] - [WARN] 中国大陆其他    第65975行:orignalProvince    17571037
+2016-10-25 16:55:00.000 [main:3267334] - [WARN] java.lang.NumberFormatException: For input string: "1kg" href="//item.taobao.com/item.htm?id=535852847740" target="_blank">名厨世家 鸭霸王〔半固态调味料〕 净含量:1"-ID:17576307-weight
+2016-10-25 16:55:04.004 [main:3271369] - [WARN] 日本-第71242行:deliveryStartArea-17576373-发货地址或者店铺地址大小:0
+2016-10-25 16:55:12.012 [main:3279288] - [WARN] 东萨摩亚(美)-第71403行:deliveryStartArea-17576539-发货地址或者店铺地址大小:0
+2016-10-25 16:55:20.020 [main:3286565] - [WARN] 其他-第71542行:weight-17576686
+2016-10-25 16:58:10.010 [main:3457029] - [WARN] 其他-第75256行:weight-17580419
+2016-10-25 16:58:11.011 [main:3458088] - [WARN] 其他-第75275行:weight-17580440
+2016-10-25 16:58:12.012 [main:3458654] - [WARN] 其他-第75287行:weight-17580451
+2016-10-25 16:58:12.012 [main:3459359] - [WARN] 其他-第75300行:weight-17580463
+2016-10-25 16:58:13.013 [main:3459787] - [WARN] 其他-第75309行:weight-17580473
+2016-10-25 16:58:13.013 [main:3459815] - [WARN] 其他-第75310行:weight-17580475
+2016-10-25 17:07:49.049 [main:4035907] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593111-weight
+2016-10-25 17:07:52.052 [main:4038684] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593203-weight
+2016-10-25 17:07:53.053 [main:4039743] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17593235-weight
+2016-10-25 17:07:54.054 [main:4041126] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593268-weight
+2016-10-25 17:07:55.055 [main:4042276] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593298-weight
+2016-10-25 17:07:58.058 [main:4044794] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593355-weight
+2016-10-25 17:07:58.058 [main:4045250] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17593381-weight
+2016-10-25 17:08:02.002 [main:4048676] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593475-weight
+2016-10-25 17:08:02.002 [main:4049344] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593490-weight
+2016-10-25 17:08:03.003 [main:4049500] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593491-weight
+2016-10-25 17:08:04.004 [main:4050785] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593533-weight
+2016-10-25 17:08:04.004 [main:4050819] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593534-weight
+2016-10-25 17:08:04.004 [main:4050852] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593537-weight
+2016-10-25 17:08:04.004 [main:4051291] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593549-weight
+2016-10-25 17:08:04.004 [main:4051410] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593546-weight
+2016-10-25 17:08:10.010 [main:4056487] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593690-weight
+2016-10-25 17:08:10.010 [main:4056578] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593691-weight
+2016-10-25 17:08:10.010 [main:4056853] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593698-weight
+2016-10-25 17:08:10.010 [main:4057101] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593704-weight
+2016-10-25 17:08:11.011 [main:4057476] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593714-weight
+2016-10-25 17:08:11.011 [main:4057867] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593723-weight
+2016-10-25 17:08:11.011 [main:4057976] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17593724-weight
+2016-10-25 17:08:12.012 [main:4059430] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593759-weight
+2016-10-25 17:08:15.015 [main:4061574] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17593808-weight
+2016-10-25 17:08:23.023 [main:4070205] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594041-weight
+2016-10-25 17:08:23.023 [main:4070236] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594045-weight
+2016-10-25 17:08:28.028 [main:4074972] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17594153-weight
+2016-10-25 17:08:41.041 [main:4088171] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17594536-weight
+2016-10-25 17:08:44.044 [main:4090582] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17594595-weight
+2016-10-25 17:08:46.046 [main:4093321] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594651-weight
+2016-10-25 17:08:46.046 [main:4093400] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594717-weight
+2016-10-25 17:08:47.047 [main:4094123] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17594665-weight
+2016-10-25 17:08:48.048 [main:4094958] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17594687-weight
+2016-10-25 17:08:52.052 [main:4098950] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17594772-weight
+2016-10-25 17:08:53.053 [main:4099717] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17594792-weight
+2016-10-25 17:08:53.053 [main:4100092] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594803-weight
+2016-10-25 17:08:53.053 [main:4100122] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594804-weight
+2016-10-25 17:08:54.054 [main:4101185] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594831-weight
+2016-10-25 17:08:56.056 [main:4102673] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17594872-weight
+2016-10-25 17:09:02.002 [main:4109080] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595022-weight
+2016-10-25 17:09:02.002 [main:4109116] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17595023-weight
+2016-10-25 17:09:02.002 [main:4109301] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17595027-weight
+2016-10-25 17:09:03.003 [main:4109789] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595039-weight
+2016-10-25 17:09:04.004 [main:4110523] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595061-weight
+2016-10-25 17:09:04.004 [main:4111192] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17595086-weight
+2016-10-25 17:09:05.005 [main:4111577] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595082-weight
+2016-10-25 17:09:05.005 [main:4111762] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595090-weight
+2016-10-25 17:09:05.005 [main:4111926] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595096-weight
+2016-10-25 17:09:07.007 [main:4113512] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595138-weight
+2016-10-25 17:09:07.007 [main:4113541] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17595137-weight
+2016-10-25 17:09:07.007 [main:4114415] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17595152-weight
+2016-10-25 17:09:08.008 [main:4114941] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17595163-weight
+2016-10-25 17:09:09.009 [main:4115573] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17595181-weight
+2016-10-25 17:09:09.009 [main:4115610] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17595182-weight
+2016-10-25 17:09:09.009 [main:4116340] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595215-weight
+2016-10-25 17:09:09.009 [main:4116370] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595216-weight
+2016-10-25 17:09:11.011 [main:4118202] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595279-weight
+2016-10-25 17:09:14.014 [main:4121416] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17595392-weight
+2016-10-25 17:09:24.024 [main:4130716] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595635-weight
+2016-10-25 17:09:24.024 [main:4130749] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595636-weight
+2016-10-25 17:09:33.033 [main:4139792] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17595863-weight
+2016-10-25 17:09:43.043 [main:4150108] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17596128-weight
+2016-10-25 17:09:43.043 [main:4150167] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17596129-weight
+2016-10-25 17:09:43.043 [main:4150193] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17596130-weight
+2016-10-25 17:09:43.043 [main:4150232] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17596131-weight
+2016-10-25 17:09:52.052 [main:4159271] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17596306-weight
+2016-10-25 17:09:54.054 [main:4160784] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596341-weight
+2016-10-25 17:09:54.054 [main:4161435] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596356-weight
+2016-10-25 17:09:55.055 [main:4161703] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596364-weight
+2016-10-25 17:09:57.057 [main:4163886] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596412-weight
+2016-10-25 17:09:59.059 [main:4166043] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596464-weight
+2016-10-25 17:10:01.001 [main:4167655] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596484-weight
+2016-10-25 17:10:04.004 [main:4171292] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596556-weight
+2016-10-25 17:10:10.010 [main:4177244] - [WARN] java.lang.NumberFormatException: For input string: "4kg-6"-ID:17596685-weight
+2016-10-25 17:10:13.013 [main:4179848] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596740-weight
+2016-10-25 17:10:14.014 [main:4180688] - [WARN] java.lang.NumberFormatException: For input string: "2kg-4"-ID:17596762-weight
+2016-10-25 17:10:22.022 [main:4188476] - [WARN] java.lang.NumberFormatException: For input string: "1kg-2"-ID:17596888-weight
+2016-10-25 17:13:56.056 [main:4402885] - [WARN] java.lang.NumberFormatException: For input string: "276,'[Product20150114-7.xls]sheet1'!B:D,2,0"-ID:17601591-weight
+2016-10-25 17:13:57.057 [main:4403951] - [WARN] java.lang.NumberFormatException: For input string: "282,'[Product20150114-7.xls]sheet1'!B:D,2,0"-ID:17601605-weight
+2016-10-25 17:19:55.055 [main:4762428] - [WARN] 500m-第102339行:weight-17609038
+2016-10-25 17:19:56.056 [main:4763417] - [WARN] 500m-第102360行:weight-17609058
+2016-10-25 17:19:57.057 [main:4763510] - [WARN] 220粒-第102363行:weight-17609062
+2016-10-25 17:21:25.025 [main:4852241] - [WARN] 800m-第104459行:weight-17611309
+2016-10-25 17:22:57.057 [main:4943804] - [WARN] ‘2400-第106462行:weight-17613463
+2016-10-25 17:23:54.054 [main:5001009] - [WARN] 140d-第107844行:weight-17614972
+2016-10-25 17:28:13.013 [main:5260226] - [WARN] ’500-第113682行:weight-17621134
+2016-10-25 17:29:42.042 [main:5349411] - [WARN] java.lang.NumberFormatException: empty String-ID:17623346-weight
+2016-10-25 17:29:43.043 [main:5349706] - [WARN] java.lang.NumberFormatException: empty String-ID:17623352-weight
+2016-10-25 17:29:43.043 [main:5350193] - [WARN] java.lang.NumberFormatException: empty String-ID:17623364-weight
+2016-10-25 17:29:47.047 [main:5353468] - [WARN] java.lang.NumberFormatException: empty String-ID:17623450-weight
+2016-10-25 17:29:48.048 [main:5355302] - [WARN] java.lang.NumberFormatException: empty String-ID:17623500-weight
+2016-10-25 17:30:57.057 [main:5423638] - [WARN] 新西兰-第117462行:deliveryStartArea-17625050-发货地址或者店铺地址大小:0
+2016-10-25 17:30:58.058 [main:5425147] - [WARN] 新西兰-第117495行:deliveryStartArea-17625080-发货地址或者店铺地址大小:0
+2016-10-25 17:30:58.058 [main:5425247] - [WARN] 新西兰-第117496行:deliveryStartArea-17625083-发货地址或者店铺地址大小:0
+2016-10-25 17:30:58.058 [main:5425333] - [WARN] 新西兰-第117497行:deliveryStartArea-17625091-发货地址或者店铺地址大小:0
+2016-10-25 17:30:58.058 [main:5425384] - [WARN] 新西兰-第117498行:deliveryStartArea-17625087-发货地址或者店铺地址大小:0
+2016-10-25 17:31:04.004 [main:5430514] - [WARN] 新西兰-第117561行:deliveryStartArea-17625146-发货地址或者店铺地址大小:0
+2016-10-25 17:31:04.004 [main:5430590] - [WARN] 新西兰-第117562行:deliveryStartArea-17625148-发货地址或者店铺地址大小:0
+2016-10-25 17:31:04.004 [main:5430625] - [WARN] 新西兰-第117563行:deliveryStartArea-17625158-发货地址或者店铺地址大小:0
+2016-10-25 17:31:04.004 [main:5431273] - [WARN] 新西兰-第117573行:deliveryStartArea-17625163-发货地址或者店铺地址大小:0
+2016-10-25 17:31:04.004 [main:5431341] - [WARN] 新西兰-第117574行:deliveryStartArea-17625169-发货地址或者店铺地址大小:0
+2016-10-25 17:31:04.004 [main:5431381] - [WARN] 新西兰-第117575行:deliveryStartArea-17625168-发货地址或者店铺地址大小:0
+2016-10-25 17:35:16.016 [main:5683175] - [WARN] 新西兰-第123375行:deliveryStartArea-17630983-发货地址或者店铺地址大小:0
+2016-10-25 17:35:17.017 [main:5683948] - [WARN] 新西兰-第123397行:deliveryStartArea-17631005-发货地址或者店铺地址大小:0
+2016-10-25 17:35:17.017 [main:5683983] - [WARN] 新西兰-第123398行:deliveryStartArea-17631012-发货地址或者店铺地址大小:0
+2016-10-25 17:35:17.017 [main:5684188] - [WARN] 新西兰-第123403行:deliveryStartArea-17631009-发货地址或者店铺地址大小:0
+2016-10-25 17:35:18.018 [main:5684777] - [WARN] 海外-第123416行:deliveryStartArea-17631029-发货地址或者店铺地址大小:0
+2016-10-25 17:35:18.018 [main:5684834] - [WARN] 海外-第123417行:deliveryStartArea-17631025-发货地址或者店铺地址大小:0
+2016-10-25 17:35:18.018 [main:5684891] - [WARN] 海外-第123418行:deliveryStartArea-17631024-发货地址或者店铺地址大小:0
+2016-10-25 17:35:19.019 [main:5685883] - [WARN] 新西兰-第123439行:deliveryStartArea-17631054-发货地址或者店铺地址大小:0
+2016-10-25 17:35:19.019 [main:5685922] - [WARN] 新西兰-第123440行:deliveryStartArea-17631050-发货地址或者店铺地址大小:0
+2016-10-25 17:35:19.019 [main:5685952] - [WARN] 新西兰-第123441行:deliveryStartArea-17631049-发货地址或者店铺地址大小:0
+2016-10-25 17:35:19.019 [main:5685991] - [WARN] 新西兰-第123442行:deliveryStartArea-17631058-发货地址或者店铺地址大小:0
+2016-10-25 17:35:19.019 [main:5686039] - [WARN] 新西兰-第123443行:deliveryStartArea-17631051-发货地址或者店铺地址大小:0
+2016-10-25 17:35:22.022 [main:5688941] - [WARN] 新西兰-第123500行:deliveryStartArea-17631112-发货地址或者店铺地址大小:0
+2016-10-25 17:35:22.022 [main:5688983] - [WARN] 新西兰-第123501行:deliveryStartArea-17631110-发货地址或者店铺地址大小:0
+2016-10-25 17:35:35.035 [main:5702227] - [WARN] 海外-第123770行:deliveryStartArea-17631379-发货地址或者店铺地址大小:0
+2016-10-25 17:35:35.035 [main:5702258] - [WARN] 海外-第123771行:deliveryStartArea-17631381-发货地址或者店铺地址大小:0
+2016-10-25 17:35:35.035 [main:5702286] - [WARN] 海外-第123772行:deliveryStartArea-17631382-发货地址或者店铺地址大小:0
+2016-10-25 17:35:35.035 [main:5702324] - [WARN] 海外-第123773行:deliveryStartArea-17631385-发货地址或者店铺地址大小:0
+2016-10-25 17:35:36.036 [main:5702607] - [WARN] 海外-第123779行:deliveryStartArea-17631390-发货地址或者店铺地址大小:0
+2016-10-25 17:35:37.037 [main:5703991] - [WARN] 海外-第123813行:deliveryStartArea-17631423-发货地址或者店铺地址大小:0
+2016-10-25 17:35:37.037 [main:5704019] - [WARN] 海外-第123814行:deliveryStartArea-17631426-发货地址或者店铺地址大小:0
+2016-10-25 17:35:37.037 [main:5704061] - [WARN] 海外-第123815行:deliveryStartArea-17631424-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5704730] - [WARN] 海外-第123835行:deliveryStartArea-17631445-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5704814] - [WARN] 海外-第123836行:deliveryStartArea-17631446-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5704919] - [WARN] 海外-第123839行:deliveryStartArea-17631448-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5704959] - [WARN] 海外-第123840行:deliveryStartArea-17631449-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5704985] - [WARN] 海外-第123841行:deliveryStartArea-17631450-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5705018] - [WARN] 海外-第123842行:deliveryStartArea-17631452-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5705053] - [WARN] 海外-第123843行:deliveryStartArea-17631453-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5705114] - [WARN] 海外-第123844行:deliveryStartArea-17631455-发货地址或者店铺地址大小:0
+2016-10-25 17:35:38.038 [main:5705395] - [WARN] 新西兰-第123849行:deliveryStartArea-17631458-发货地址或者店铺地址大小:0
+2016-10-25 17:35:39.039 [main:5706443] - [WARN] 海外-第123869行:deliveryStartArea-17631480-发货地址或者店铺地址大小:0
+2016-10-25 17:37:34.034 [main:5821113] - [WARN] 新西兰-第126648行:deliveryStartArea-17634289-发货地址或者店铺地址大小:0
+2016-10-25 17:37:34.034 [main:5821148] - [WARN] 新西兰-第126649行:deliveryStartArea-17634296-发货地址或者店铺地址大小:0
+2016-10-25 17:39:02.002 [main:5908747] - [WARN] 新西兰-第128695行:deliveryStartArea-17636363-发货地址或者店铺地址大小:0
+2016-10-25 17:39:02.002 [main:5908790] - [WARN] 新西兰-第128696行:deliveryStartArea-17636365-发货地址或者店铺地址大小:0
+2016-10-25 17:46:46.046 [main:6373315] - [WARN] 东萨摩亚(美)-第139236行:deliveryStartArea-17646975-发货地址或者店铺地址大小:0
+2016-10-25 17:47:22.022 [main:6408687] - [WARN] 400±(20)-第140099行:weight-17647859
+2016-10-25 17:47:38.038 [main:6425148] - [WARN] 菲律宾-第140491行:deliveryStartArea-17648248-发货地址或者店铺地址大小:0
+2016-10-25 17:48:28.028 [main:6474572] - [WARN] 千岛湖-第141681行:orignalCity-17649458-标准城市大小：0
+2016-10-25 17:48:28.028 [main:6474760] - [WARN] 千岛湖-第141685行:orignalCity-17649454-标准城市大小：0
+2016-10-25 17:48:28.028 [main:6474918] - [WARN] 千岛湖-第141688行:orignalCity-17649455-标准城市大小：0
+2016-10-25 17:48:57.057 [main:6503909] - [WARN] java.lang.NumberFormatException: For input string: "500ML*12"-ID:17650184-weight
+2016-10-25 17:48:57.057 [main:6504071] - [WARN] java.lang.NumberFormatException: For input string: "2400ML*6"-ID:17650181-weight
+2016-10-25 17:48:59.059 [main:6506121] - [WARN] java.lang.NumberFormatException: For input string: "490ML*12"-ID:17650241-weight
+2016-10-25 17:49:43.043 [main:6550410] - [WARN] 同里镇-第143476行:orignalCity-17651266-标准城市大小：0
+2016-10-25 17:50:40.040 [main:6606899] - [WARN] 称重-第144812行:weight-17652621
+2016-10-25 17:54:14.014 [main:6821110] - [WARN] 日本-第149741行:deliveryStartArea-17657638-发货地址或者店铺地址大小:0
