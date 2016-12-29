@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("主函数");
 		Process process = new Process();
 		try {			
-			process.newTable();
+		/*	process.newTable();*/
 			process.errorTable();
 			process.getValues();
 		} catch (Exception e) {
