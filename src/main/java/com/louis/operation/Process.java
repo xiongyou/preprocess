@@ -41,8 +41,8 @@ import org.omg.CORBA.DATA_CONVERSION;
  */
 public  class Process {
     //新表的名字
-    String newTableName = "data12_new";
-    String oldTableName = "data12";
+    String newTableName = "data201703_new";
+    String oldTableName = "data";
     //处理的表名
     String table=newTableName;
     private Connection conn = null;
@@ -55,21 +55,21 @@ public  class Process {
     String wholeProvinceCodeDe="";
     //得到标准省市划分
     ExtractFromExcel extractFromExcel = new ExtractFromExcel();    
-    //设置处理数据当前月份
-    private String YEAR = "2016";
- 
+   
     public static Logger logger = Logger.getLogger("com.foo");
     /*更新到另外一个表中*/
     public void newTable(){
         int i;
         
         
-        String strNewTable = "insert  into "+newTableName+" SELECT * from "+oldTableName+" where dataID in(select max(dataID) from "+oldTableName+" where errorInfo='' or errorInfo is null group BY productInnerId)";
+        String strNewTable = "create table "+newTableName+" SELECT * from "+oldTableName+" where dataID in(select max(dataID) from "+oldTableName+" where errorInfo='' or errorInfo is null group BY productInnerId) ";
         try {
             conn = JdbcUtil.getConnection();
             stmt = conn.createStatement();
             i = stmt.executeUpdate(strNewTable);
-            System.out.println(i);
+            //对字段建立索引
+            stmt.execute("create index  mytable_categoryid on "+newTableName+"(dataID)");
+            System.out.println("向新表中插入了"+i+"行数据");
         } catch (Exception e) {
             
             e.printStackTrace();
@@ -99,14 +99,15 @@ public  class Process {
             conn = JdbcUtil.getConnection();
             stmt = conn.createStatement();
             i = stmt.executeUpdate(strErrorTable);
-            System.out.println(i);
+            System.out.println("错误数据："+i);
         } catch (Exception e) {
             
             e.printStackTrace();
         }finally{
             try {
-                conn.close();
                 stmt.close();
+                conn.close();
+              
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -114,7 +115,6 @@ public  class Process {
             
         }
         
-    
     }
     
     /*获取数据库中相应的值*/
