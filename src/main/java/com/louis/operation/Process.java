@@ -1,5 +1,7 @@
 package com.louis.operation;
  
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,7 +9,10 @@ import java.sql.SQLException;
 import com.louis.DataPreProcessImpl.DataPreProcessImpl;
 import com.louis.IDataPreProcess.IDataPreProcess;
 import com.louis.domain.DataBaseUser;
+import com.louis.util.DateUtils;
 import com.louis.util.ExtractFromExcel;
+import com.louis.util.GetTotal;
+import com.louis.util.GetUtils;
 import com.louis.util.JdbcUtil;
 import com.louis.util.JudgeMent;
  
@@ -20,6 +25,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.Set;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
@@ -41,8 +47,8 @@ import org.omg.CORBA.DATA_CONVERSION;
  */
 public  class Process {
     //新表的名字
-    String newTableName = "data201703_new";
-    String oldTableName = "data";
+	private static String newTableName = GetUtils.getNewTableName();
+	private static String oldTableName = GetUtils.getOldTableName();
     //处理的表名
     String table=newTableName;
     private Connection conn = null;
@@ -50,25 +56,32 @@ public  class Process {
     private Statement stmt1 = null;
     private ResultSet rs = null;
     private Date extractTime;
+    private String monthSaleCount = null;
+    
     int count=0;
     String wholeProvinceCode="";
     String wholeProvinceCodeDe="";
+    List<HashMap<String,String>> regionCodeName = null;
     //得到标准省市划分
     ExtractFromExcel extractFromExcel = new ExtractFromExcel();    
    
     public static Logger logger = Logger.getLogger("com.foo");
     /*更新到另外一个表中*/
     public void newTable(){
-        int i;
+        int i=0;
         
         
-        String strNewTable = "create table "+newTableName+" SELECT * from "+oldTableName+" where dataID in(select max(dataID) from "+oldTableName+" where errorInfo='' or errorInfo is null group BY productInnerId) ";
+        String strNewTable = "create table "+newTableName+" like " +oldTableName;
         try {
             conn = JdbcUtil.getConnection();
             stmt = conn.createStatement();
-            i = stmt.executeUpdate(strNewTable);
+            stmt.execute(strNewTable);
+            //insert
+            String strInsert="insert into "+newTableName +" select * from "+oldTableName+" where dataID in(select max(dataID) from "+oldTableName+" where errorInfo='' or errorInfo is null group BY productInnerId) ";
+            i = stmt.executeUpdate(strInsert);
+           
             //对字段建立索引
-            stmt.execute("create index  mytable_categoryid on "+newTableName+"(dataID)");
+           // stmt.execute("create index  mytable_categoryid on "+newTableName+"(dataID)");
             System.out.println("向新表中插入了"+i+"行数据");
         } catch (Exception e) {
             
@@ -117,13 +130,25 @@ public  class Process {
         
     }
     
+    //获取省份
+    public void getProvince() {
+    	try {
+			regionCodeName = extractFromExcel.getRegionFromExcel();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
     /*获取数据库中相应的值*/
-    @Test
-    public void getValues(){
+    
+    public void getValues(int value1,int value2){
         
         //查询数据库中的相应的值
         try {
-            List<HashMap<String,String>> regionCodeName = extractFromExcel.getRegionFromExcel();
+            // 20170904List<HashMap<String,String>> regionCodeName = extractFromExcel.getRegionFromExcel();
     /*//添加字段
             String strAdd = "alter table data add ("
                     + "std_stdProductPrice decimal(15,3) null,"
@@ -142,8 +167,7 @@ public  class Process {
                     + "std_storeLocationCity varchar(255) null,"
                     + "std_storeLocationCityCode int(11)  null,"
                     + "std_stdWeightValue decimal(15,3) null)";*/
-            //where DataID>=17506833    ID:17515251
-            String str = "select dataID,productName,province,city,deliveryStartArea,storeLocation,productPrice,productPromPrice,weight,storeURL,extractTime from "+table+" where isOperation=0";
+            String str = "select dataID,productName,province,city,deliveryStartArea,storeLocation,productPrice,productPromPrice,weight,storeURL,extractTime, monthSaleCount from "+table+" where isOperation=0  LIMIT "+value1+", " +value2;
             conn = JdbcUtil.getConnection();
             stmt = conn.createStatement();
             stmt1 = conn.createStatement();
@@ -151,10 +175,12 @@ public  class Process {
             rs= stmt.executeQuery(str);
             System.out.println("rs");
             while(rs.next()){
+            	
                 count++;
                 //创建对象
                 DataBaseUser  dataBaseUser = new DataBaseUser();
                 IDataPreProcess dataPreProcess=new DataPreProcessImpl();
+                try {
                 /*
                  * 得到数据库中每一行的值
                  * */
@@ -169,6 +195,7 @@ public  class Process {
                 dataBaseUser.setWeight(rs.getString(9));
                 dataBaseUser.setStoreURL(rs.getString(10));
                 extractTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(rs.getString(11));
+                monthSaleCount = rs.getString(12);
                 //得到long类型当前时间
                 long l = System.currentTimeMillis();
                 //new日期对象
@@ -570,7 +597,15 @@ public  class Process {
                 
                 System.out.println("******分割线******");
                 System.out.println("更新时间"+extractTime);
-                //注意：没有具体到小时
+                //注意：extractTime的时间戳小于最小时间戳或者大于最大时间戳
+                if(extractTime.getTime()<DateUtils.getMinTime(GetUtils.getMinTime())) {
+                	SimpleDateFormat format =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+                	extractTime = format.parse(GetUtils.getMinTime());
+                }
+                if(extractTime.getTime()>DateUtils.getMaxTime(GetUtils.getMaxTime())) {
+                	SimpleDateFormat format =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+                	extractTime = format.parse(GetUtils.getMaxTime());
+                }
                 String timeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(extractTime);
                 System.out.println("extractTime:"+timeFormat);
                 int year=extractTime.getYear()+1900;
@@ -579,8 +614,8 @@ public  class Process {
                 String first = timeFormat.split("-")[2];
                 first = first.substring(0, 2);
                 day =Integer.parseInt(first) ;
-                String analyzeTime = null;
-                if(day<20){//超过采集月份
+                String analyzeTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(extractTime);
+                /*if(day<20){//超过采集月份
                     extractTime.setDate(1);
                     extractTime.setHours(0);
                     extractTime.setMinutes(0);
@@ -594,7 +629,7 @@ public  class Process {
                     day =Integer.parseInt(second) ;
                 }else{
                     analyzeTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(extractTime);
-                }
+                }*/
     
                 
             /*    String extraTime = extractTime.toString();
@@ -641,6 +676,13 @@ public  class Process {
                 /*System.out.println("yearOfCentury: " + "20"+localDate.getYearOfCentury()); 
                 System.out.println("monthOfYear: " + localDate.getMonthOfYear()); 
                 System.out.println("dayOfMonth: " + localDate.getDayOfMonth());*/
+                
+                /*
+                 * 如果monthSaleCount不是数字，则更新为0
+                 * */
+                if (monthSaleCount==null||!GetTotal.isNumeric(monthSaleCount)) {
+					monthSaleCount = "0";
+				}
                 
                 
                /*规范化类型*/
@@ -699,10 +741,14 @@ public  class Process {
                  ",monthOfYear="+month+
                  ",dayOfMonth="+day+
                  ",isOperation=1"+
+                 ", monthSaleCount="+monthSaleCount+
                  " where dataID="+ dataBaseUser.getDataID();
                System.out.println(updateStdProvince);
                 stmt1.executeUpdate(updateStdProvince); 
-                
+            	} catch (Exception e) {
+            		System.out.println("出现了异常"+dataBaseUser.getDataID());
+            		String updateStdProvince="update "+table+"  set isOperation=-1 where dataID="+dataBaseUser.getDataID();
+				}  
             }
             System.out.println("总共执行了："+count+"行");
         } catch (Exception e) {

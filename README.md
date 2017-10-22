@@ -1,5 +1,47 @@
 ## dataPreprocess
 
+使用说明：
+1、主函数为Main.java,调用了四个方法：
+	(1)process.newTable();
+	(2)process.errorTable();
+	(3)process.getProvince();
+	(4)process.getValues();
+         注意：如果需要重复执行，记得要注释掉(1)(2)两个方法的调用
+2、配置db.properties、dbprocess.properties中的参数
+
+
+
+
+
+
+
+
+
+
+
+
+
+数据预处理
+版本：2017.10.16
+添加了properties文件
+
+
+数据预处理
+版本：2017.09.05
+由于数据量较大，需要分开处理，每次取出一千条数据
+使用说明：
+1、首先修改mian函数中，totalCount的值
+
+
+
+版本：
+2017.05.08版本：
+1、后台处理process.java中修改表的名字：newTableName = "新表名";oldTableName = "旧表名"
+2、运行main函数
+
+
+
+
 数据预处理
 2016.12.28版本：
 新增功能:将旧表中的error行信息另存放到一张新表中。

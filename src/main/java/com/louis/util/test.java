@@ -35,7 +35,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 public class test {
 	
 	public static void main(String[] args) throws IOException, URISyntaxException, SQLException {
-		
+		/*
 		// 获得连接池
         DataSource dataSource = DemoDBCP.getDataSource();
         // 从连接池中获得连接
@@ -53,10 +53,26 @@ public class test {
         pstmt.execute();
         // 关闭连接
         conn.close();
-
-		
-		
-		
+*/
+		/*System.out.println(GetUtils.getNewTableName());
+		System.out.println(GetUtils.getOldTableName());*/
+	/*	try {
+			GetTotal.getTotal("data_201709");
+			System.out.println(GetTotal.isExist("data_20170"));
+			System.out.println(GetTotal.isNumeric("100.12"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+ /*       long res = 0L;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = simpleDateFormat.parse(s);
+        long ts = date.getTime();
+         res = String.valueOf(ts);
+        System.out.println(ts);*/
+		System.out.println(GetUtils.getMaxTime());
+		System.out.println(GetUtils.getMinTime());
+		System.out.println(DateUtils.getMaxTime(GetUtils.getMinTime()));
 		/*int count = 0;
 		int duan = 0;
 		for (int i = 0; i < 10; i++) {

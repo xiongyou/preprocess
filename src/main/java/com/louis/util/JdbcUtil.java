@@ -1,9 +1,11 @@
 package com.louis.util;
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Properties;
 
 /** 
  * @author Michael2397 2692613726@qq.com: 
@@ -11,10 +13,15 @@ import java.sql.Statement;
  * 类说明 :Jdbc的连接和关闭
  */
 public class JdbcUtil {
+	private static String driver = null;
+	private static String url = GetUtils.getUrl();
+    private static String user = GetUtils.getUserName();
+	private static String password = GetUtils.getPassWord();
+	
 	//连接参数
-	private static String url = "jdbc:mysql://202.202.5.140:3306/test";
+/*	private static String url = "jdbc:mysql://139.224.112.239:3306/ebmis_db?useSSL=false";
 	private static String user = "root";
-	private static String password = "1701";
+	private static String password = "1701";*/
 	
 	/*
 	 * 获取数据库的连接
@@ -25,7 +32,7 @@ public class JdbcUtil {
 			return DriverManager.getConnection(url, user, password);
 			
 	}
-	
+
 	/*
 	 * 关闭
 	 * */
