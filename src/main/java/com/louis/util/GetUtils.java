@@ -40,6 +40,22 @@ public class GetUtils {
 		String oldTableName = prop.getProperty("oldTableName");
 		return oldTableName;
 	}
+	
+
+	// 获取要处理的项目编号
+	public static String getProjectId() {
+		Properties prop = null;
+		try {
+			InputStream in = JdbcUtil.class.getClassLoader().getResourceAsStream("dbprocess.properties");
+			prop = new Properties();
+			prop.load(in);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String projectId = prop.getProperty("projectId");
+		return projectId;
+	}
 
 	// 获取最小时间
 	public static String getMinTime() {

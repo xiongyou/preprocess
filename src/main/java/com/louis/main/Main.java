@@ -14,13 +14,16 @@ import com.louis.util.GetUtils;
 public class Main {
 	//新表名
 	private static String newTableName = GetUtils.getNewTableName();
+	
+	
+	
 	//数据库总数
 	private static int totalCount= 0;
 	//每次循环个数
 	private static int eachCount=1000;
 	
 	public static void main(String[] args) {
-		
+
 		long start = System.currentTimeMillis();
 		System.out.println("主函数");
 		Process process = new Process();

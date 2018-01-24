@@ -49,6 +49,7 @@ public  class Process {
     //新表的名字
 	private static String newTableName = GetUtils.getNewTableName();
 	private static String oldTableName = GetUtils.getOldTableName();
+	private static String projId=GetUtils.getProjectId();
     //处理的表名
     String table=newTableName;
     private Connection conn = null;
@@ -76,8 +77,20 @@ public  class Process {
             conn = JdbcUtil.getConnection();
             stmt = conn.createStatement();
             stmt.execute(strNewTable);
+            
+            
             //insert
-            String strInsert="insert into "+newTableName +" select * from "+oldTableName+" where dataID in(select max(dataID) from "+oldTableName+" where errorInfo='' or errorInfo is null group BY productInnerId) ";
+            String strInsert="";
+            if(projId.equals("")){
+            	strInsert="insert into " + newTableName + " select * from "+oldTableName+" where dataID in(select max(dataID) from "
+                		+ oldTableName + " where (errorInfo='' or errorInfo is null)  group BY productInnerId) ";
+            }
+            else {
+            	strInsert="insert into " + newTableName + " select * from "+oldTableName+" where dataID in(select max(dataID) from "
+                		+ oldTableName + " where (errorInfo='' or errorInfo is null) "
+                		+ " and productInnerId in (select b._product_inner_id from _crawler_project_task b where b._project_id in ("+projId
+                		+")) group BY productInnerId) ";
+            }
             i = stmt.executeUpdate(strInsert);
            
             //对字段建立索引
